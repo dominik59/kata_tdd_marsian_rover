@@ -68,12 +68,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/RoverClass.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/SummarizationClass.php">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/tests/ExampleTest.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/tests/RoverClassTest.php">
           <value>
             <set />
           </value>
