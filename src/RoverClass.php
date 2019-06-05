@@ -1,8 +1,14 @@
 <?php
-
+/**
+ * Class for Rover class operation.
+ */
 namespace App;
 
-
+/**
+ * Class RoverClass.
+ *
+ * @package App
+ */
 class RoverClass
 {
     /**
