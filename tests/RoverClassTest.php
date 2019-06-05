@@ -4,6 +4,7 @@
  */
 namespace Test;
 
+use App\RoverClass;
 use PHPUnit\Framework\TestCase;
 
 /**
