@@ -15,15 +15,16 @@ use PHPUnit\Framework\TestCase;
 class RoverClassTest extends TestCase
 {
     /**
-     * Test whether there is a class for Rover operation.
+     * Test whether we are able to initialize rover.
      */
-    public function testRoverClassOperationExistence()
+    public function testRoverInitializationMethodExistence()
     {
         //given
         //when
-        $roverClassObject = new RoverClass();
+        $roverClassObject = new RoverClass(0, 0, "N");
 
         //then
-        $this->assertInstanceOf(RoverClass::class, $roverClassObject);
+        $this->assertSame($roverClassObject->getCoordinates(), ['x' => 0, 'y' => 0]);
+        $this->assertSame($roverClassObject->getDirection(), 'N');
     }
 }

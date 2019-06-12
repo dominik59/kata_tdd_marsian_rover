@@ -8,6 +8,16 @@
             <set />
           </value>
         </entry>
+        <entry key="/dummy.sql">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$APPLICATION_CONFIG_DIR$/consoles/db/fa6c256c-602e-4277-977f-df635ab00b5f/console.sql">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Projects/systemy-inteligentne/html/index.html">
           <value>
             <set />
@@ -89,6 +99,136 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/tests/StringCalculatorTest.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-admin/application/modules/search/models/Open_search_model.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-admin/application/modules/searcher/models/Preferred_supplier_model.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-admin/application/modules/searcher/models/Quote_model.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Helpers/PreferredSupplierPerformanceScore.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Http/Controllers/Comms/QuoteRequestController.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Http/Transformers/Comms/UserTransformer.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Http/Transformers/QuoteRequestTransformer.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Models/AdditionalContact.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Models/QuoteRequest.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Models/User.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Repositories/AdditionalContactRepository.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Repositories/QuoteRequestRepository.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Repositories/UserRepository.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Services/AdditionalContactService.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Services/Searcher/QuoteRequestService.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Services/UserService.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/database/factories/EvaluationCriteriaFactory.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/tests/Feature/Http/Controllers/Comms/QuoteRequestControllerTest.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/tests/Unit/App/Helpers/PreferredSupplierPerformanceScoreTest.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-components/dev/dev.env">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-web/application/modules/enquiries_n_quotes/models/Enquiries_n_quotes_model.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-web/application/modules/searcher/controllers/Quotes.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../pm-user-sql/.env">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../tdd/src/StringCalculator.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../tdd/src/SummarizationClass.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../tdd/tests/StringCalculatorTest.php">
           <value>
             <set />
           </value>
