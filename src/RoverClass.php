@@ -65,4 +65,14 @@ class RoverClass
     {
         return $this->direction;
     }
+
+    public function getX()
+    {
+        return $this->xCoordinate;
+    }
+
+    public function getY()
+    {
+        return $this->yCoordinate;
+    }
 }
