@@ -24,7 +24,10 @@ class RoverClassTest extends TestCase
         $roverClassObject = new RoverClass(0, 0, "N");
 
         //then
-        $this->assertSame($roverClassObject->getCoordinates(), ['x' => 0, 'y' => 0]);
+        $this->assertSame($roverClassObject->getX(), 0);
+        $this->assertSame($roverClassObject->getY(), 0);
         $this->assertSame($roverClassObject->getDirection(), 'N');
     }
+
+
 }

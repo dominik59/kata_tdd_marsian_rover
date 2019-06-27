@@ -203,6 +203,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-components/searcher-vendor-tendering-history-report/src/actions/apiActions.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-components/shared/api.config.js">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../plantminer-web/application/modules/enquiries_n_quotes/models/Enquiries_n_quotes_model.php">
           <value>
             <set />
