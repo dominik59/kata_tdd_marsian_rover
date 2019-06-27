@@ -62,4 +62,21 @@ class RoverClassTest extends TestCase
         $this->assertSame($roverClassObject->getY(), -1);
         $this->assertSame($roverClassObject->getDirection(), 'N');
     }
+
+    /**
+     * Test whether rover can react on commands sent by array of characters.
+     */
+    public function testRoverCanTurnLeft()
+    {
+        //given
+        $roverClassObject = new RoverClass(0, 0, "N");
+
+        //when
+        $roverClassObject->executeCommands(['l']);
+
+        //then
+        $this->assertSame($roverClassObject->getX(), 0);
+        $this->assertSame($roverClassObject->getY(), 0);
+        $this->assertSame($roverClassObject->getDirection(), 'W');
+    }
 }
