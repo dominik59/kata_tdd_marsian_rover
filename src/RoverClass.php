@@ -84,6 +84,8 @@ class RoverClass
             $this->yCoordinate--;
         } elseif ($array[0] === 'l') {
             $this->direction = 'W';
+        } elseif ($array[0] === 'r') {
+            $this->direction = 'E';
         }
     }
 }
