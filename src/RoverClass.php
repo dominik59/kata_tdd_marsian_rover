@@ -75,4 +75,9 @@ class RoverClass
     {
         return $this->yCoordinate;
     }
+
+    public function executeCommands(array $array)
+    {
+        $this->yCoordinate++;
+    }
 }
