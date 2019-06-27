@@ -78,6 +78,10 @@ class RoverClass
 
     public function executeCommands(array $array)
     {
-        $this->yCoordinate++;
+        if ($array[0] === 'f') {
+            $this->yCoordinate++;
+        } elseif ($array[0] === 'b') {
+            $this->yCoordinate--;
+        }
     }
 }
