@@ -82,10 +82,28 @@ class RoverClass
             $this->yCoordinate++;
         } elseif ($array[0] === 'b') {
             $this->yCoordinate--;
-        } elseif ($array[0] === 'l') {
-            $this->direction = 'W';
-        } elseif ($array[0] === 'r') {
-            $this->direction = 'E';
+        } elseif ($array[0] === 'l' || $array[0] === 'r') {
+            $this->direction = $this->mapTurnOrderToNewDirection($this->direction, $array[0]);
         }
+    }
+
+    private function mapTurnOrderToNewDirection($actualDirection, $orderCharacter)
+    {
+        $mapTurnOrderToNewDirection = [
+            'l' => [
+                'N' => 'W',
+                'W' => 'S',
+                'S' => 'E',
+                'E' => 'N',
+            ],
+            'r' => [
+                'N' => 'E',
+                'E' => 'S',
+                'S' => 'W',
+                'W' => 'N',
+            ],
+        ];
+
+        return $mapTurnOrderToNewDirection[$orderCharacter][$actualDirection];
     }
 }
