@@ -32,7 +32,7 @@ class RoverClassTest extends TestCase
     /**
      * Test whether rover can react on commands sent by array of characters.
      */
-    public function testRoverReactsProperlyOnArrayWithCommands()
+    public function testRoverCanGoForward()
     {
         //given
         $roverClassObject = new RoverClass(0, 0, "N");
