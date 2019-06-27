@@ -102,6 +102,12 @@ class RoverClassTest extends TestCase
         $this->assertSame($roverClassObject->getDirection(), $expectedDirection);
     }
 
+    /**
+     * Return generator which check whether with some initial direction and right turn order it will interprets it
+     * right way.
+     *
+     * @return \Generator Data provider
+     */
     public function dataProviderForTurningRight()
     {
         yield [

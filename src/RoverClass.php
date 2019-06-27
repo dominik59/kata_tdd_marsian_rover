@@ -76,17 +76,31 @@ class RoverClass
         return $this->yCoordinate;
     }
 
+    /**
+     * Method which interprets command characters and manage some actions.
+     *
+     * @param array $array Array of commands
+     */
     public function executeCommands(array $array)
     {
-        if ($array[0] === 'f') {
+        $orderCharacter = $array[0];
+        if ($orderCharacter === 'f') {
             $this->yCoordinate++;
-        } elseif ($array[0] === 'b') {
+        } elseif ($orderCharacter === 'b') {
             $this->yCoordinate--;
-        } elseif ($array[0] === 'l' || $array[0] === 'r') {
-            $this->direction = $this->mapTurnOrderToNewDirection($this->direction, $array[0]);
+        } elseif ($orderCharacter === 'l' || $orderCharacter === 'r') {
+            $this->direction = $this->mapTurnOrderToNewDirection($this->direction, $orderCharacter);
         }
     }
 
+    /**
+     * Returns new direction according to command character and actual direction.
+     *
+     * @param string $actualDirection Actual direction
+     * @param string $orderCharacter  Order character
+     *
+     * @return New direction character
+     */
     private function mapTurnOrderToNewDirection($actualDirection, $orderCharacter)
     {
         $mapTurnOrderToNewDirection = [
