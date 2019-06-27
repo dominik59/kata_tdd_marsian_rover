@@ -65,11 +65,16 @@ class RoverClassTest extends TestCase
 
     /**
      * Test whether rover can react on commands sent by array of characters.
+     *
+     * @dataProvider dataProviderForTurningLeft
+     *
+     * @param string $initialDirection  Character which mean initial direction
+     * @param string $expectedDirection Character which mean expected direction
      */
-    public function testRoverCanTurnLeft()
+    public function testRoverCanTurnLeft($initialDirection, $expectedDirection)
     {
         //given
-        $roverClassObject = new RoverClass(0, 0, "N");
+        $roverClassObject = new RoverClass(0, 0, $initialDirection);
 
         //when
         $roverClassObject->executeCommands(['l']);
@@ -77,7 +82,33 @@ class RoverClassTest extends TestCase
         //then
         $this->assertSame($roverClassObject->getX(), 0);
         $this->assertSame($roverClassObject->getY(), 0);
-        $this->assertSame($roverClassObject->getDirection(), 'W');
+        $this->assertSame($roverClassObject->getDirection(), $expectedDirection);
+    }
+
+    /**
+     * Return generator which check whether with some initial direction and left turn order it will interprets it
+     * right way.
+     *
+     * @return \Generator Data provider
+     */
+    public function dataProviderForTurningLeft()
+    {
+        yield [
+            'initialDirection' => 'N',
+            'expectedDirection' => 'W',
+        ];
+        yield [
+            'initialDirection' => 'W',
+            'expectedDirection' => 'S',
+        ];
+        yield [
+            'initialDirection' => 'S',
+            'expectedDirection' => 'E',
+        ];
+        yield [
+            'initialDirection' => 'E',
+            'expectedDirection' => 'N',
+        ];
     }
 
     /**
