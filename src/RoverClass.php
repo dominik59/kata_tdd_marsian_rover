@@ -47,16 +47,6 @@ class RoverClass
     }
 
     /**
-     * Get coordinates of rover.
-     *
-     * @return array Coordinates of rover
-     */
-    public function getCoordinates()
-    {
-        return ['x' => $this->xCoordinate, 'y' => $this->yCoordinate];
-    }
-
-    /**
      * Get direction of rover.
      *
      * @return string Direction of rover
@@ -66,11 +56,21 @@ class RoverClass
         return $this->direction;
     }
 
+    /**
+     * Get X coordinate of rover.
+     *
+     * @return int X coordinate
+     */
     public function getX()
     {
         return $this->xCoordinate;
     }
 
+    /**
+     * Get Y coordinate of rover.
+     *
+     * @return int Y coordinate
+     */
     public function getY()
     {
         return $this->yCoordinate;
