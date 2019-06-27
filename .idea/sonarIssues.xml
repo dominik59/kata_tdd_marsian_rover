@@ -158,6 +158,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Repositories/Lopt/PackageSupplierRepository.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../plantminer-api/app/Repositories/QuoteRequestRepository.php">
           <value>
             <set />

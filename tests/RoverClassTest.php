@@ -82,11 +82,16 @@ class RoverClassTest extends TestCase
 
     /**
      * Test whether rover can react on commands sent by array of characters.
+     *
+     * @dataProvider dataProviderForTurningRight
+     *
+     * @param string $initialDirection  Character which mean initial direction
+     * @param string $expectedDirection Character which mean expected direction
      */
-    public function testRoverCanTurnRight()
+    public function testRoverCanTurnRight($initialDirection, $expectedDirection)
     {
         //given
-        $roverClassObject = new RoverClass(0, 0, "N");
+        $roverClassObject = new RoverClass(0, 0, $initialDirection);
 
         //when
         $roverClassObject->executeCommands(['r']);
@@ -94,6 +99,14 @@ class RoverClassTest extends TestCase
         //then
         $this->assertSame($roverClassObject->getX(), 0);
         $this->assertSame($roverClassObject->getY(), 0);
-        $this->assertSame($roverClassObject->getDirection(), 'E');
+        $this->assertSame($roverClassObject->getDirection(), $expectedDirection);
+    }
+
+    public function dataProviderForTurningRight()
+    {
+        yield [
+            'initialDirection' => 'N',
+            'expectedDirection' => 'E',
+        ];
     }
 }
