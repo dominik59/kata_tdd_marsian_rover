@@ -108,5 +108,17 @@ class RoverClassTest extends TestCase
             'initialDirection' => 'N',
             'expectedDirection' => 'E',
         ];
+        yield [
+            'initialDirection' => 'E',
+            'expectedDirection' => 'S',
+        ];
+        yield [
+            'initialDirection' => 'S',
+            'expectedDirection' => 'W',
+        ];
+        yield [
+            'initialDirection' => 'W',
+            'expectedDirection' => 'N',
+        ];
     }
 }
