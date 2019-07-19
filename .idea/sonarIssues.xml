@@ -8,6 +8,21 @@
             <set />
           </value>
         </entry>
+        <entry key="$APPLICATION_CONFIG_DIR$/consoles/db/fa6c256c-602e-4277-977f-df635ab00b5f/console.sql">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$APPLICATION_CONFIG_DIR$/scratches/scratch_13.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$APPLICATION_CONFIG_DIR$/scratches/scratch_6.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Projects/systemy-inteligentne/html/index.html">
           <value>
             <set />
@@ -34,6 +49,11 @@
           </value>
         </entry>
         <entry key="$USER_HOME$/Projects/systemy-inteligentne/style/components/output__speech.styl">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/.docker/php/Dockerfile">
           <value>
             <set />
           </value>
@@ -68,6 +88,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/GameOfLife.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/RoverClass.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/SummarizationClass.php">
           <value>
             <set />
@@ -78,7 +108,37 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/tests/GameOfLifeTest.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/tests/RoverClassTest.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/tests/StringCalculatorTest.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Http/Transformers/Lopt/PackageStageInstanceTransformer.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Http/Transformers/Lopt/PackageSupplierItemTransformer.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Http/Transformers/Lopt/PackageSupplierTransformer.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Repositories/Lopt/PackageSupplierRepository.php">
           <value>
             <set />
           </value>
