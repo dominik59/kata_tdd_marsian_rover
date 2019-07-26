@@ -143,6 +143,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-components/searcher-vendor-tendering-history-report/src/actions/apiActions.js">
+          <value>
+            <set />
+          </value>
+        </entry>
       </map>
     </option>
   </component>
