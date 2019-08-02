@@ -38,6 +38,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/.docker/php/Dockerfile">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/.gitignore">
           <value>
             <set />
@@ -73,12 +78,37 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/Wardrobe.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/tests/ExampleTest.php">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/tests/StringCalculatorTest.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/tests/WardrobeTest.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Http/Transformers/EvaluationTemplateAssignmentMetaTransformer.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-api/app/Repositories/EvaluationQuestionRepository.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../plantminer-box/files/xdebug.ini">
           <value>
             <set />
           </value>
