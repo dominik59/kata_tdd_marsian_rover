@@ -10,15 +10,16 @@ use PHPUnit\Framework\TestCase;
 class MyWardrobeTest extends TestCase
 {
     /**
-     * Example test.
+     *
      */
-    public function testNoSegmentsReturnNoCombination()
+    public function testNoElementsResultInNoCombination()
     {
         //given
-        $wardrobe = new MyWardrobe(250);
+        $wardrobeObject = new MyWardrobe();
+        $segments = [];
 
         //when
-        $combinations = $wardrobe->getCombinations([]);
+        $combinations = $wardrobeObject->getCombinations($segments);
 
         //then
         $this->assertSame([], $combinations);
@@ -27,64 +28,36 @@ class MyWardrobeTest extends TestCase
     /**
      *
      */
-    public function testEmptyWardrobeReturnNoCombination()
+    public function testProperCombinationOnOneElementProvided()
     {
         //given
-        $wardrobe = new MyWardrobe(0);
+        $wardrobeObject = new MyWardrobe();
+        $segments = [50];
 
         //when
-        $combinations = $wardrobe->getCombinations([50, 75]);
+        $combinations = $wardrobeObject->getCombinations($segments);
 
         //then
-        $this->assertSame([], $combinations);
+        $this->assertSame([[50, 50, 50, 50, 50]], $combinations);
     }
 
     /**
      *
      */
-    public function testEmptyWardrobeAndNoCombinationsReturnNoCombination()
+    public function testTwoSegmentsResultInProperCombination()
     {
         //given
-        $wardrobe = new MyWardrobe(0);
+        $wardrobeObject = new MyWardrobe();
+        $segments = [50, 100];
 
         //when
-        $combinations = $wardrobe->getCombinations([]);
+        $combinations = $wardrobeObject->getCombinations($segments);
 
         //then
-        $this->assertSame([], $combinations);
+        $this->assertSame([
+            [50, 50, 50, 50, 50],
+            [50, 100, 100],
+        ], $combinations);
     }
 
-    /**
-     *
-     */
-    public function testFillWardrobeWithOneSegment()
-    {
-        //given
-        $wardrobe = new MyWardrobe(250);
-
-        //when
-        $combinations = $wardrobe->getCombinations([50]);
-
-        //then
-        $this->assertSame(
-            [
-                [50, 50, 50, 50, 50],
-            ], $combinations
-        );
-    }
-
-    /**
-     *
-     */
-    public function testElementThatNotFitWillNotCreateCombination()
-    {
-        //given
-        $wardrobe = new MyWardrobe(250);
-
-        //when
-        $combinations = $wardrobe->getCombinations([75]);
-
-        //then
-        $this->assertSame([], $combinations);
-    }
 }

@@ -6,46 +6,29 @@ namespace App;
 
 class MyWardrobe
 {
-    /**
-     * @var int
-     */
-    private $wardrobeSize;
+    private $size = 250;
 
-    /**
-     * MyWardrobe constructor.
-     *
-     * @param int $wardrobeSize
-     */
-    public function __construct(int $wardrobeSize)
+    public function getCombinations(array $segmentsArray)
     {
-        $this->wardrobeSize = $wardrobeSize;
-    }
+        $outputCombinations = [];
 
-    public function getCombinations(array $segments)
-    {
-        $combinations = [];
+        array_walk($segmentsArray, function ($segment) use ($segmentsArray, &$outputCombinations) {
+            $proposedCombinations = [];
 
-        if ($this->wardrobeSize != 0 && count($segments) != 0) {
-            $availablePlank = $segments[0];
-
-            $numberOfElementsThatFit = floor($this->wardrobeSize / $availablePlank);
-            $suggestedCombination = array_fill(0, $numberOfElementsThatFit, $availablePlank);
-
-            if ($this->doesSuggestedCombinationFit($suggestedCombination)) {
-                $combinations[] = $suggestedCombination;
+            $numberOfSegmentsThatFit = floor($this->size / $segment);
+            $currentCombination = [];
+            for ($i = 0; $i < $numberOfSegmentsThatFit; $i++) {
+                $currentCombination[] = $segment;
             }
-        }
+            if (array_sum($currentCombination) == $this->size) {
+                $proposedCombinations[] = $currentCombination;
+            }
 
-        return $combinations;
-    }
+            foreach ($segmentsArray as $segment) {
+            }
+        });
 
-    /**
-     * @param array $suggestedCombination
-     *
-     * @return bool
-     */
-    private function doesSuggestedCombinationFit(array $suggestedCombination): bool
-    {
-        return array_sum($suggestedCombination) == $this->wardrobeSize;
+
+        return $outputCombinations;
     }
 }
