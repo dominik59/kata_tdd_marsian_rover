@@ -68,12 +68,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/Josephus.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Permutation.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/SummarizationClass.php">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/tests/ExampleTest.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/tests/JosephusTest.php">
           <value>
             <set />
           </value>
