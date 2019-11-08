@@ -68,7 +68,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/DeadFish.php">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/SummarizationClass.php">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/tests/DeadFishTest.php">
           <value>
             <set />
           </value>
