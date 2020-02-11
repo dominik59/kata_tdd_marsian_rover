@@ -11,7 +11,7 @@ class SupplierGrouper
         $closestSuppliersWithoutGroup = $this->getClosestSuppliersWithoutGroup($rawCollection);
         $closestSuppliersFromGroup = $this->getClosestGroupedSupplier($rawCollection);
 
-        return array_merge($closestSuppliersFromGroup, array_values($closestSuppliersWithoutGroup));
+        return array_merge($closestSuppliersFromGroup, $closestSuppliersWithoutGroup);
     }
 
     private function getClosestGroupedSupplier(array $rawCollection): array
@@ -41,7 +41,7 @@ class SupplierGrouper
             }
         }
 
-        return $closestSuppliersWithoutGroup;
+        return array_values($closestSuppliersWithoutGroup);
     }
 
     private function getGroupedSupplierWithClosestBranch(array $rawCollection): array
@@ -64,7 +64,7 @@ class SupplierGrouper
             }
         }
 
-        return $groupedSuppliers;
+        return array_values($groupedSuppliers);
     }
 
     private function getCloserSupplier(array $firstSupplier, array $secondSupplier): array
