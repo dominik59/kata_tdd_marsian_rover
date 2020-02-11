@@ -103,31 +103,13 @@ class SupplierGrouperTest extends TestCase
         );
     }
 
-    public function testGroupedSuppliersWithBranchesShouldReturnOneClosestInGroupAndInBranch(): void
-    {
-        //given
-        $rawCollection = [
-            [
-                'id' => 1000,
-                'group' => 10,
-                'distance' => 1,
-            ],
-            [
-                'id' => 1000,
-                'group' => 10,
-                'distance' => 7,
-            ],
-            [
-                'id' => 1001,
-                'group' => 11,
-                'distance' => 5,
-            ],
-            [
-                'id' => 1001,
-                'group' => 11,
-                'distance' => 8,
-            ],
-        ];
+    /**
+     * @dataProvider dataProviderForTestGroupedSuppliersWithBranchesShouldReturnOneClosestInGroupAndInBranch
+     */
+    public function testGroupedSuppliersWithBranchesShouldReturnOneClosestInGroupAndInBranch(
+        array $rawCollection,
+        array $expectedResult
+    ): void {
         $supplierGrouper = new SupplierGrouper();
 
         //when
@@ -135,7 +117,37 @@ class SupplierGrouperTest extends TestCase
 
         //then
         $this->assertSame(
-            [
+            $expectedResult,
+            $groupedSuppliers
+        );
+    }
+
+    public function dataProviderForTestGroupedSuppliersWithBranchesShouldReturnOneClosestInGroupAndInBranch()
+    {
+        yield [
+            'rawCollection' => [
+                [
+                    'id' => 1000,
+                    'group' => 10,
+                    'distance' => 1,
+                ],
+                [
+                    'id' => 1000,
+                    'group' => 10,
+                    'distance' => 7,
+                ],
+                [
+                    'id' => 1001,
+                    'group' => 11,
+                    'distance' => 5,
+                ],
+                [
+                    'id' => 1001,
+                    'group' => 11,
+                    'distance' => 8,
+                ],
+            ],
+            'expectedResult' => [
                 [
                     'id' => 1000,
                     'group' => 10,
@@ -147,7 +159,43 @@ class SupplierGrouperTest extends TestCase
                     'distance' => 5,
                 ],
             ],
-            $groupedSuppliers
-        );
+        ];
+
+        yield [
+            'rawCollection' => [
+                [
+                    'id' => 1000,
+                    'group' => 10,
+                    'distance' => 7,
+                ],
+                [
+                    'id' => 1000,
+                    'group' => 10,
+                    'distance' => 1,
+                ],
+                [
+                    'id' => 1001,
+                    'group' => 11,
+                    'distance' => 8,
+                ],
+                [
+                    'id' => 1001,
+                    'group' => 11,
+                    'distance' => 5,
+                ],
+            ],
+            'expectedResult' => [
+                [
+                    'id' => 1000,
+                    'group' => 10,
+                    'distance' => 1,
+                ],
+                [
+                    'id' => 1001,
+                    'group' => 11,
+                    'distance' => 5,
+                ],
+            ],
+        ];
     }
 }
