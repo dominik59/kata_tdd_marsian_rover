@@ -118,5 +118,40 @@ class AssemblerInterpreterTest extends TestCase
         ];
     }
 
-    //TODO Make jnz instruction
+    /**
+     * @dataProvider dataProviderForTestJnzInstruction
+     */
+    public function testJnzInstruction($input, $output)
+    {
+        //given
+        $assemblerInterpreter = new AssemblerInterpreter();
+
+        //when
+        $programResult = $assemblerInterpreter->simple_assembler($input);
+
+        //then
+        $this->assertSame($output, $programResult);
+    }
+
+    public function dataProviderForTestJnzInstruction()
+    {
+        yield [
+            ['mov a 0', 'jnz a 2', 'mov b 1', 'mov c 1'],
+            ['a' => 0, 'b' => 1, 'c' => 1],
+        ];
+        yield [
+            ['mov a 1', 'jnz a 2', 'mov b 1', 'mov c 1'],
+            ['a' => 1, 'c' => 1],
+        ];
+        yield [
+            ['mov a -2', 'inc a', 'inc a', 'jnz a 2', 'mov b 1', 'mov c 1'],
+            ['a' => 0, 'b' => 1, 'c' => 1],
+        ];
+        yield [
+            ['jnz a 1'],
+            [],
+        ];
+    }
+
+
 }

@@ -10,8 +10,8 @@ class AssemblerInterpreter
     {
         $registers = [];
 
-        foreach ($instructions as $instruction) {
-
+        for ($i = 0; $i < count($instructions);) {
+            $instruction = $instructions[$i];
             $explodedInstruction = explode(' ', $instruction);
             $instructionType = $explodedInstruction[0];
 
@@ -21,10 +21,19 @@ class AssemblerInterpreter
                 } else {
                     $registers[$explodedInstruction[1]] = $registers[$explodedInstruction[2]];
                 }
+                $i++;
             } elseif ('inc' === $instructionType) {
                 $registers[$explodedInstruction[1]]++;
+                $i++;
             } elseif ('dec' === $instructionType) {
                 $registers[$explodedInstruction[1]]--;
+                $i++;
+            } elseif ('jnz' === $instructionType) {
+                if ($registers[$explodedInstruction[1]] > 0) {
+                    $i += $explodedInstruction[2];
+                } else {
+                    $i++;
+                }
             }
         }
 
