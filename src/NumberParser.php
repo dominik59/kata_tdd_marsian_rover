@@ -38,12 +38,22 @@ class NumberParser
             80 => 'eighty',
             90 => 'ninety',
         ];
-        if ($number > 20 && $number < 100 && $number % 10 !== 0) {
-            $parsedNumber = $numbersMap[(int) ($number / 10) * 10] . '-' . $numbersMap[$number - (int) ($number / 10) * 10];
-        } else {
-            $parsedNumber = $numbersMap[$number];
+
+        if ($number === 0) {
+            return $numbersMap[$number];
+        }
+        $parsedNumber = '';
+        if ($number >= 100) {
+            $parsedNumber = $numbersMap[(int) ($number / 100)] . ' hundred ';
+            $number = $number - (int) ($number / 100) * 100;
         }
 
-        return $parsedNumber;
+        if ($number > 20 && $number < 100 && $number % 10 !== 0) {
+            $parsedNumber .= $numbersMap[(int) ($number / 10) * 10] . '-' . $numbersMap[$number - (int) ($number / 10) * 10];
+        } elseif ($number > 0) {
+            $parsedNumber .= $numbersMap[$number];
+        }
+
+        return trim($parsedNumber);
     }
 }

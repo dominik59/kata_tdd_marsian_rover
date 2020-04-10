@@ -138,7 +138,7 @@ class NumberParserTest extends TestCase
      *
      * @dataProvider numbersBetween21And99DataProvider
      */
-    public function testParsingNumbersBetween21And99(int $inputNumber, string $expectedParsedNumber)
+    public function testParsingNumbersBetween21And99(int $inputNumber, string $expectedParsedNumber): void
     {
         //given
         $numberParser = new NumberParser();
@@ -243,6 +243,53 @@ class NumberParserTest extends TestCase
         yield [
             'inputNumber' => 99,
             'expectedParsedNumber' => 'ninety-nine',
+        ];
+    }
+
+    /**
+     * Test parsing for single number.
+     *
+     * @dataProvider numbersBetween100And999DataProvider
+     */
+    public function testParsingNumbersBetween100And999(
+        int $inputNumber,
+        string $expectedParsedNumber
+    ): void {
+        //given
+        $numberParser = new NumberParser();
+
+        //when
+        $actualParsedNumber = $numberParser->number2words($inputNumber);
+
+        //then
+        $this->assertSame($expectedParsedNumber, $actualParsedNumber);
+    }
+
+    public function numbersBetween100And999DataProvider(): ?\Generator
+    {
+        yield [
+            'inputNumber' => 100,
+            'expectedParsedNumber' => 'one hundred',
+        ];
+        yield [
+            'inputNumber' => 301,
+            'expectedParsedNumber' => 'three hundred one',
+        ];
+        yield [
+            'inputNumber' => 799,
+            'expectedParsedNumber' => 'seven hundred ninety-nine',
+        ];
+        yield [
+            'inputNumber' => 800,
+            'expectedParsedNumber' => 'eight hundred',
+        ];
+        yield [
+            'inputNumber' => 950,
+            'expectedParsedNumber' => 'nine hundred fifty',
+        ];
+        yield [
+            'inputNumber' => 999,
+            'expectedParsedNumber' => 'nine hundred ninety-nine',
         ];
     }
 }
